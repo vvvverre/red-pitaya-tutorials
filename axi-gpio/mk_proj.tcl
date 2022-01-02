@@ -18,7 +18,7 @@ create_project -part $part $projectname $outputdir
 source ./../src/bd/axi_gpio.tcl
 
 make_wrapper -files [get_files $bdpath/$bdname.bd] -top
-add_files -norecurse $bdpath/hdl/axi_gpio_wrapper.v
+add_files -norecurse $bdpath/hdl/${bdname}_wrapper.v
 
 read_xdc ../src/xdc/constraints.xdc
 
